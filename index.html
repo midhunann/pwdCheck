@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwdCheck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">pwdCheck</a>
+            <div class="nav-links">
+                <a href="#" id="homeLink">pwdCheck</a>
+                <a href="https://github.com/midhunann/pwdCheck" target="_blank">GitHub</a>
+                <a href="#" id="aboutLink">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="mainContent">
+        <div class="password-section">
+            <h1>Password Strength Checker</h1>
+            
+            <div class="password-input-container">
+                <input type="password" class="password-input" placeholder="Enter your password" id="passwordInput">
+                <button class="toggle-password" id="togglePassword">👁️</button>
+            </div>
+            
+            <div class="strength-bar">
+                <div class="strength-bar-fill" id="strengthBar"></div>
+            </div>
+
+            <div class="strength-grid">
+                <div class="strength-column">
+                    <h3>Requirements <a href="#about-requirements" class="info-icon">i</a></h3>
+                    <ul class="parameter-list" id="parameterList">
+                        <li data-requirement="length">8+ characters</li>
+                        <li data-requirement="uppercase">Uppercase letter</li>
+                        <li data-requirement="lowercase">Lowercase letter</li>
+                        <li data-requirement="number">Number</li>
+                        <li data-requirement="special">Special character</li>
+                    </ul>
+                </div>
+                
+                <div class="strength-column">
+                    <h3>Score <a href="#about-score" class="info-icon">i</a></h3>
+                    <div class="score-display" id="scoreDisplay">0</div>
+                </div>
+                
+                <div class="strength-column">
+                    <h3>Time to Crack <a href="#about-time" class="info-icon">i</a></h3>
+                    <div class="crack-time" id="crackTime">-</div>
+                </div>
+                
+                <div class="strength-column">
+                    <h3>Review <a href="#about-review" class="info-icon">i</a></h3>
+                    <div class="review" id="review">Enter a password to see its review.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="generator-section">
+            <h3>Password Generator <a href="#about-generator" class="info-icon">i</a></h3>
+            <div class="generated-password-container">
+                <button class="btn" id="generateButton">Generate a Password</button>
+                <div id="passwordOutput" class="hidden">
+                    <input type="text" class="generated-password" id="generatedPassword" readonly>
+                    <button class="btn" id="copyButton">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="about-section hidden" id="aboutContent">
+        <h1>About Password Strength Checker</h1>
+        
+        <div class="about-grid">
+            <div class="about-card" id="about-requirements">
+                <h3>Password Requirements</h3>
+                <p>Our password checker evaluates passwords based on essential security criteria including minimum length, character variety, and complexity. Each requirement contributes to overall password strength and security.</p>
+            </div>
+
+            <div class="about-card" id="about-score">
+                <h3>Strength Score Calculation</h3>
+                <p>The strength score is calculated using a comprehensive algorithm that considers password length, character diversity, unique character count, and pattern analysis. The score ranges from 0 to 100, with higher scores indicating stronger passwords.</p>
+            </div>
+
+            <div class="about-card" id="about-time">
+                <h3>Crack Time Estimation</h3>
+                <p>The time-to-crack estimation is calculated using entropy-based analysis, considering the password's complexity and current computing capabilities. This provides a realistic estimate of how long it would take to break the password using modern cracking methods.</p>
+            </div>
+
+            <div class="about-card" id="about-review">
+                <h3>Password Review</h3>
+                <p>Our intelligent review system provides contextual feedback based on multiple factors including password strength, common patterns, and potential vulnerabilities. This helps users understand how to improve their password security.</p>
+            </div>
+
+            <div class="about-card" id="about-generator">
+                <h3>Password Generator</h3>
+                <p>The password generator creates cryptographically secure random passwords using a combination of uppercase and lowercase letters, numbers, and special characters. Generated passwords are designed to meet high security standards while remaining usable.</p>
+            </div>
+        </div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
